@@ -111,7 +111,7 @@ export const resources: ResourceItem[] = [
     id: 'elearn-6',
     title: 'Hướng dẫn sử dụng Mailchimp & Mail Merge',
     description: 'Hướng dẫn thực hành sử dụng nền tảng Mailchimp kết hợp công cụ Mail Merge để tối ưu hóa chiến dịch email marketing của bạn.',
-    image: '/src/assets/images/regenerated_image_1779386444507.jpg',
+    image: './src huy/regenerated_image_1779386444507.jpg',
     link: 'https://youtu.be/7AZSy7P7ows?si=EL2hGNV9Wo4r-Rjh',
     category: 'course',
     tags: ['Marketing', 'Email']
@@ -120,7 +120,7 @@ export const resources: ResourceItem[] = [
     id: 'elearn-7',
     title: 'Tổ chức sự kiện',
     description: 'Cung cấp góc nhìn thực chiến, quy trình chuẩn bị và các bước cốt lõi để tổ chức một sự kiện thành công tốt đẹp.',
-    image: '/src/assets/images/regenerated_image_1779386446016.jpg',
+    image: './src huy/regenerated_image_1779386446016.jpg',
     link: 'https://drive.google.com/file/d/19GQ2aRmPqAJhhBpTgReGHup5NfO_MLN8/view?usp=sharing',
     category: 'course',
     tags: ['Sự kiện', 'Tổ chức']
@@ -129,7 +129,7 @@ export const resources: ResourceItem[] = [
     id: 'elearn-8',
     title: 'BÍ KÍP CHẠY SỰ KIỆN MƯỢT MÀ, DELEGATION NHƯ MỘT CHUYÊN GIA',
     description: 'Bí kíp rèn luyện kỹ năng điều phối, phân công công việc (delegation) hiệu quả giúp sự kiện vận hành trơn tru.',
-    image: '/src/assets/images/regenerated_image_1779386447802.jpg',
+    image: './src huy/regenerated_image_1779386447802.jpg',
     link: 'https://www.facebook.com/share/p/1JPuxj2Eg7/',
     category: 'course',
     tags: ['Sự kiện', 'Delegation']
@@ -138,7 +138,7 @@ export const resources: ResourceItem[] = [
     id: 'elearn-9',
     title: 'HỌC LÀM SAO ĐỂ THẬT LÀ “ELITE”?',
     description: 'Bí quyết học tập và rèn luyện hiệu quả để nâng tầm bản thân và tỏa sáng theo phong cách riêng tại Elite.',
-    image: '/src/assets/images/regenerated_image_1779470263945.png',
+    image: './src/regenerated_image_1779470263945.png',
     link: 'https://www.facebook.com/share/v/1BhDx9JArW/',
     category: 'course',
     tags: ['Học tập', 'Kỹ năng']
@@ -147,7 +147,7 @@ export const resources: ResourceItem[] = [
     id: 'elearn-10',
     title: 'Critical Thinking',
     description: 'Phát triển tư duy phản biện sắc bén - chìa khóa để phân tích thông tin đa chiều và đưa ra những quyết định đột phá.',
-    image: '/src/assets/images/regenerated_image_1779470266738.jpg',
+    image: './src huy/regenerated_image_1779470266738.jpg',
     link: 'https://drive.google.com/file/d/1JBmUGP8yAxfY-MSbNsg_L49qyRKgbJBD/view?usp=sharing',
     category: 'course',
     tags: ['Tư duy', 'Critical Thinking']
@@ -156,7 +156,7 @@ export const resources: ResourceItem[] = [
     id: 'elearn-11',
     title: 'Văn hóa Feedback',
     description: 'Xây dựng thói quen phản hồi văn minh, tích cực - yếu tố cốt lõi giúp tập thể gắn bó, thấu hiểu và cùng nhau bứt phá.',
-    image: '/src/assets/images/regenerated_image_1779470268155.png',
+    image: './src huy/regenerated_image_1779470268155.png',
     link: 'https://drive.google.com/file/d/1iMpCQ11OC0ZDw0QED9tvDo_rj3DJ3LBO/view?usp=sharing',
     category: 'course',
     tags: ['Văn hóa', 'Feedback']

@@ -50,7 +50,7 @@ export default function AboutUs() {
       caption: 'Function LnD Term VIII - Tập thể khai sinh E-magazine'
     },
     {
-      url: '/src/assets/images/regenerated_image_1779467753117.jpg',
+      url: './src/regenerated_image_1779467753117.jpg',
       caption: 'Vườn Nhân sự Term 9 phát triển mạnh mẽ E-magazine'
     },
     {
@@ -66,7 +66,7 @@ export default function AboutUs() {
       caption: 'Dờ Vườn Term XI tiếp tục ươm mầm tri thức và lan tỏa văn hóa học tập cho các Eliters'
     },
     {
-      url: '/src/assets/images/regenerated_image_1779468382760.jpg',
+      url: './src huy/regenerated_image_1779468382760.jpg',
       caption: 'Dờ Vườn Term XII - những hạt giống của Vườn tiếp tục phát triển Elite Library với một giao diện hoàn toàn mới mẻ'
     }
   ];
