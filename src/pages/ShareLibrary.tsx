@@ -24,7 +24,7 @@ export default function ShareLibrary() {
   });
 
   return (
-    <div className="bg-warm-white min-h-screen font-sans antialiased text-charcoal pb-24">
+    <div className="bg-transparent min-h-screen font-sans antialiased text-charcoal pb-24">
       {/* Premium minimal background accent */}
       <div className="absolute top-0 left-0 w-full h-[350px] bg-gradient-to-b from-accent/5 to-transparent pointer-events-none -z-10" />
 

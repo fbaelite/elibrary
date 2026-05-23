@@ -31,19 +31,33 @@ export default function CourseDetail() {
     '15/01/2022',
     '06/06/2022',
     '',
-    '14/06/2023'
+    '14/06/2023',
+    '24/1/2024',
+    '29/5/2024',
+    '14/1/2025',
+    '8/2/2025',
+    '9/4/2026',
+    '11/4/2026'
   ];
   const courseDate = courseDates[courseIndex];
-  const isMC = id === 'course-4';
+  const isMC = id === 'course-4' || id === 'elearn-4';
   let duration = '4 Mins';
-  if (id === 'course-3' || id === 'course-4') {
+  if (id === 'course-3' || id === 'course-4' || id === 'elearn-3' || id === 'elearn-4') {
     duration = '5 Mins';
-  } else if (id === 'course-5') {
+  } else if (id === 'course-5' || id === 'elearn-5') {
     duration = '8 Mins';
+  } else if (id === 'elearn-6' || id === 'course-6') {
+    duration = '11 min';
+  } else if (id === 'elearn-7' || id === 'course-7') {
+    duration = '5 min';
+  } else if (id === 'elearn-8' || id === 'course-8') {
+    duration = '1 hour';
+  } else if (id === 'elearn-9' || id === 'course-9' || id === 'elearn-10' || id === 'course-10' || id === 'elearn-11' || id === 'course-11') {
+    duration = '3 min';
   }
 
   return (
-    <div className="bg-warm-white dark:bg-primary min-h-screen pb-20 overflow-x-hidden transition-colors duration-300">
+    <div className="bg-transparent min-h-screen pb-20 overflow-x-hidden transition-colors duration-300">
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[400px] bg-primary dark:bg-slate-900 overflow-hidden">
         <div className="absolute inset-0 opacity-40">
@@ -66,7 +80,7 @@ export default function CourseDetail() {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            style={{ fontFamily: 'Georgia, serif' }}
+            style={{ fontFamily: "'Inter', sans-serif" }}
             className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight"
           >
             {course.title}
@@ -143,8 +157,10 @@ export default function CourseDetail() {
           <div className="space-y-8">
             <div className="bg-primary dark:bg-slate-900 text-white p-10 rounded-[40px] shadow-2xl shadow-primary/30 relative overflow-hidden transition-colors duration-300 border border-transparent dark:border-white/5">
               <div className="absolute top-0 right-0 w-32 h-32 bg-accent opacity-20 -mr-16 -mt-16 rounded-full"></div>
-              <h3 className="text-xl font-black mb-6 uppercase tracking-widest relative z-10">
-                Hòm thư góp ý
+              <h3 className="text-2xl md:text-3xl font-black mb-6 uppercase tracking-widest relative z-10 leading-tight">
+                Hòm thư
+                <br />
+                Góp ý
               </h3>
               <p className="text-white/70 text-sm mb-8 italic relative z-10">
                 Chúng mình luôn sẵn sàng lắng nghe những đóng góp từ các bạn!

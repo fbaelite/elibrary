@@ -17,6 +17,7 @@ import AboutUs from './pages/AboutUs';
 import ShareLibrary from './pages/ShareLibrary';
 import Development from './pages/Development';
 import { motion, AnimatePresence } from 'motion/react';
+import CloudBackground from './components/CloudBackground';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -160,9 +161,10 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen font-sans selection:bg-accent/30 selection:text-primary">
+      <div className="relative flex flex-col min-h-screen font-sans selection:bg-accent/30 selection:text-primary overflow-x-hidden">
+        <CloudBackground />
         <Navbar />
-        <main className="flex-grow">
+        <main className="flex-grow relative z-10 pointer-events-auto">
           <AnimatedRoutes />
         </main>
         <Footer />

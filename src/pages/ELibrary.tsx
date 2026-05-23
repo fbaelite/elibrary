@@ -103,7 +103,7 @@ const ELibrary: React.FC = () => {
   };
 
   return (
-    <div className="bg-warm-white min-h-screen font-sans antialiased text-charcoal">
+    <div className="bg-transparent min-h-screen font-sans antialiased text-charcoal">
       {/* MAIN CONTENT */}
       <main className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -168,7 +168,7 @@ const ELibrary: React.FC = () => {
             {/* Book Card 2 */}
             <div className="group flex flex-col bg-white rounded-[40px] shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden border border-gray-100/50">
                <div className="relative aspect-[1/1.2] overflow-hidden rounded-t-[40px]">
-                <img src="./anh elearn/biael2.png" alt="Eliter's Experience" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" style={{ transform: "scale(0.8)", objectPosition: "calc(50% + 42px) 50%", transformOrigin: "center" }} referrerPolicy="no-referrer" />
+                <img src="./anh elearn/biael2.png" alt="Eliter's Experience" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" style={{ objectPosition: "calc(50% + 30px) 50%" }} referrerPolicy="no-referrer" />
               </div>
               <div className="p-8 flex-1 flex flex-col">
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -186,7 +186,7 @@ const ELibrary: React.FC = () => {
             {/* Book Card 3 */}
             <div className="group flex flex-col bg-white rounded-[40px] shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden border border-gray-100/50">
               <div className="relative aspect-[1/1.2] overflow-hidden rounded-t-[40px]">
-                <img src="./anh elearn/biael3.png" alt="Eliter's Skills" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" style={{ transform: "scale(0.73) translateY(-5%)", objectPosition: "calc(50% + 16px) 50%", transformOrigin: "center" }} referrerPolicy="no-referrer" />
+                <img src="./anh elearn/biael3.png" alt="Eliter's Skills" className="w-full h-full object-cover scale-90 group-hover:scale-100 transition-transform duration-700" style={{ objectPosition: "calc(50% + 10px) 50%" }} referrerPolicy="no-referrer" />
               </div>
               <div className="p-8 flex-1 flex flex-col">
                 <div className="flex flex-wrap gap-2 mb-4">

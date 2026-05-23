@@ -24,7 +24,7 @@ const FloatingIcon = ({ children, className, delay = 0, duration = 3 }: { childr
 
 export default function Guide() {
   return (
-    <div className="py-20 bg-warm-white dark:bg-primary min-h-screen transition-colors duration-300">
+    <div className="py-20 bg-transparent min-h-screen transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <header className="mb-32 text-center max-w-3xl mx-auto relative">

@@ -49,7 +49,7 @@ export default function EMagazine() {
             className="h-1.5 w-24 bg-accent mx-auto mb-8"
           />
           <p className="text-xl text-black dark:text-gray-400 leading-relaxed font-medium transition-colors">
-            Nơi lưu giữ những câu chuyện, cảm xúc và những dấu ấn đặc biệt của cộng đồng Eliter qua từng trang nội san.
+            Ấn phẩm định kỳ cập nhật những câu chuyện truyền cảm hứng và góc nhìn đa chiều về cuộc sống và công việc của các thế hệ Eliter.
           </p>
         </header>
 
@@ -62,7 +62,7 @@ export default function EMagazine() {
             />
             <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out flex items-center justify-center p-8 md:p-16 z-20 overflow-y-auto">
               <div className="max-w-4xl text-center space-y-6 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-                <p className="text-lg md:text-xl text-white leading-relaxed font-medium">
+                <p className="text-lg md:text-xl text-white leading-relaxed font-medium text-justify">
                   <span className="text-accent font-black">Elite Magazine - Nội san Elite</span> ra mắt ngày <span className="font-bold underline decoration-accent/50 decoration-4">31/07/2022</span>, phát hành định kỳ vào mỗi cuối tháng, được sáng lập và thực hiện bởi ban <span className="font-bold text-white">Nhân Sự - FBA Elite nhiệm kỳ VIII</span>. Ra đời với mục đích gắn kết các thế hệ Eliters, tạo cơ hội để các thành viên bày tỏ tâm tư, tình cảm, suy nghĩ hoặc thể hiện khả năng văn chương của mình. Elite Magazine hứa hẹn sẽ là nơi cung cấp những thông tin mới lạ dưới nhiều góc nhìn đa dạng, là nơi phơi bày "góc khuất" thú vị trong quá trình cùng nhau hoạt động dưới mái nhà E, hay chỉ đơn giản là nơi để các bạn trút bầu tâm sự và tìm kiếm một tâm hồn đồng điệu. Đặc biệt, được chắp bút và hoàn thiện bởi chính các Eliters, vậy nên Elite Magazine sẽ chính là tiếng nói mang đậm phong cách cá nhân của từng thành viên FBA Elite.
                 </p>
               </div>

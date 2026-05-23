@@ -12,7 +12,7 @@ export default function ELearning() {
   const courses = resources.filter(r => r.category === 'course');
 
   return (
-    <div className="bg-warm-white dark:bg-primary min-h-screen animate-fade-in pb-20 overflow-x-hidden transition-colors duration-300">
+    <div className="bg-transparent min-h-screen animate-fade-in pb-20 overflow-x-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto pt-20 px-4 sm:px-6 lg:px-8">
         <header className="mb-32 text-center max-w-3xl mx-auto relative group">
           <motion.div
@@ -42,8 +42,8 @@ export default function ELearning() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="h-1.5 w-24 bg-accent mx-auto mb-8"
           />
-          <p className="text-xl text-gray-800 dark:text-gray-100 leading-relaxed font-medium max-w-2xl mx-auto">
-            Nâng tầm kỹ năng với hệ thống khóa học trực tuyến từ các chuyên gia hàng đầu tại <span className="text-primary dark:text-accent font-bold">Elite Library</span>.
+          <p className="text-[21px] text-gray-800 dark:text-gray-100 leading-relaxed font-normal text-center max-w-2xl mx-auto">
+            Hệ thống các bài học ngắn trực tuyến, hỗ trợ Eliters chủ động trong việc tiếp nhận kiến thức mới một cách linh hoạt và thuận tiện
           </p>
         </header>
 
@@ -62,6 +62,7 @@ export default function ELearning() {
                   src={course.image}
                   alt={course.title}
                   className="w-full h-full object-contain p-4 transition-transform duration-700 group-hover:scale-105"
+                  referrerPolicy="no-referrer"
                 />
                 {course.link === 'MAINTENANCE' && (
                   <div className="absolute inset-0 bg-primary/40 backdrop-blur-[2px] flex items-center justify-center p-6 text-center">
@@ -76,8 +77,8 @@ export default function ELearning() {
               </div>
               <div className="lg:w-[55%] p-10 lg:p-16 flex flex-col justify-center">
                 <h3
-                  style={{ fontFamily: 'Georgia, serif' }}
-                  className="text-3xl md:text-5xl font-black text-primary dark:text-white mb-6 leading-tight group-hover:text-accent transition-colors"
+                  style={{ fontFamily: 'system-ui' }}
+                  className="text-[42px] font-black text-primary dark:text-white mb-6 leading-tight group-hover:text-accent transition-colors"
                 >
                   {course.title}
                 </h3>
@@ -100,6 +101,17 @@ export default function ELearning() {
               </div>
             </motion.div>
           ))}
+
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center py-12"
+          >
+            <p className="text-lg md:text-xl font-bold text-accent italic">
+              E-learning sẽ ra số mới trong thời gian gần nhất, mong bạn kiên nhẫn chờ đợi nhé!
+            </p>
+          </motion.div>
         </div>
       </div>
     </div>

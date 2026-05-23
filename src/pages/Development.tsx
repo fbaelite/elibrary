@@ -654,7 +654,7 @@ export default function Development() {
   });
 
   return (
-    <div className="bg-warm-white min-h-screen font-sans antialiased text-charcoal pb-24 relative overflow-hidden">
+    <div className="bg-transparent min-h-screen font-sans antialiased text-charcoal pb-24 relative overflow-hidden">
       {/* Background accent */}
       <div className="absolute top-0 left-0 w-full h-[350px] bg-gradient-to-b from-accent/5 to-transparent pointer-events-none -z-10" />
 

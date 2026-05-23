@@ -3,8 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Shield, Target, Users, BookOpen } from 'lucide-react';
+import { Shield, Target, Users, BookOpen, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const steps = [
   {
@@ -38,8 +39,40 @@ const steps = [
 ];
 
 export default function AboutUs() {
+  const [currentPhoto, setCurrentPhoto] = useState(0);
+  const teamPhotos = [
+    {
+      url: '/anh about us/ac1.png',
+      caption: 'Function LnD Term VII - Những đàn anh đàn chị sáng lập nền tảng Elite - Library <3'
+    },
+    {
+      url: '/anh about us/ac2.png',
+      caption: 'Function LnD Term VIII - Tập thể khai sinh E-magazine'
+    },
+    {
+      url: '/src/assets/images/regenerated_image_1779467753117.jpg',
+      caption: 'Vườn Nhân sự Term 9 phát triển mạnh mẽ E-magazine'
+    },
+    {
+      url: '/anh about us/ac3.png',
+      caption: 'Funtion LnD Term X - Những mầm non "eo èn đi" với sứ mệnh gây dựng Elite Library ngày càng lớn mạnh! '
+    },
+    {
+      url: '/anh about us/ac4.png',
+      caption: 'Vườn Nhân sự vươn tầm nhân loại'
+    },
+    {
+      url: '/anh about us/term11.png',
+      caption: 'Dờ Vườn Term XI tiếp tục ươm mầm tri thức và lan tỏa văn hóa học tập cho các Eliters'
+    },
+    {
+      url: '/src/assets/images/regenerated_image_1779468382760.jpg',
+      caption: 'Dờ Vườn Term XII - những hạt giống của Vườn tiếp tục phát triển Elite Library với một giao diện hoàn toàn mới mẻ'
+    }
+  ];
+
   return (
-    <div className="py-20 bg-background-warm dark:bg-primary/20 min-h-screen transition-colors duration-300">
+    <div className="py-20 bg-transparent min-h-screen transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="mb-20 text-center max-w-3xl mx-auto relative overflow-hidden">
           <motion.div
@@ -69,8 +102,8 @@ export default function AboutUs() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="h-1.5 w-24 bg-accent mx-auto mb-8"
           />
-          <p className="text-lg text-gray-800 dark:text-gray-100 leading-relaxed font-semibold">
-            Elite Library không chỉ là một thư viện số, mà là một hệ sinh thái tri thức hiện đại, giúp kết nối người học với những nguồn tài nguyên giáo dục uy tín và chất lượng nhất.
+          <p style={{ fontSize: '26px' }} className="text-gray-800 dark:text-gray-100 leading-relaxed font-semibold text-center max-w-5xl mx-auto">
+            <span className="font-extrabold text-accent">Elite Library</span> là hệ thống thư viện số dành cho các thế hệ Eliters được phát triển bởi <span className="font-extrabold text-accent">Function Learning & Development</span>. Dự án hướng tới việc xây dựng một không gian lưu trữ và kế thừa tri thức, nơi tổng hợp các tài liệu học tập, kinh nghiệm hoạt động và định hướng phát triển cá nhân từ các thế hệ Eliters và Alumni qua nhiều thế hệ. Bên cạnh đó, <span className="font-extrabold text-accent">Elite Library</span> còn góp phần lan tỏa văn hóa học tập, và thúc đẩy tinh thần phát triển bản thân không ngừng trong cộng đồng FBA Elite.
           </p>
         </header>
 
@@ -129,6 +162,67 @@ export default function AboutUs() {
             </p>
           </motion.div>
         </div>
+
+        {/* Carousel Section */}
+        <section className="mt-24 max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold text-primary dark:text-gray-300 mb-12 text-center uppercase tracking-widest">Góc Kỷ Niệm</h2>
+          <div className="relative group">
+            <div className="relative aspect-[16/9] overflow-hidden rounded-[40px] shadow-2xl border-[12px] border-white/10 dark:border-white/5 transition-all">
+              {teamPhotos.map((photo, idx) => (
+                <div
+                  key={idx}
+                  className={`absolute inset-0 transition-opacity duration-1000 ${idx === currentPhoto ? 'opacity-100' : 'opacity-0'}`}
+                >
+                  <img
+                    src={photo.url}
+                    alt={photo.caption}
+                    className={`w-full h-full object-cover transition-transform duration-500 ${idx === 6 ? 'scale-[1.2]' : ''}`}
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                </div>
+              ))}
+
+              {/* Navigation Buttons */}
+              <button
+                onClick={() =>
+                  setCurrentPhoto(
+                    (prev) => (prev - 1 + teamPhotos.length) % teamPhotos.length
+                  )
+                }
+                className="absolute left-6 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-black/40 text-white flex items-center justify-center backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity hover:bg-accent shadow-xl z-10"
+              >
+                <ChevronLeft className="w-8 h-8" />
+              </button>
+              <button
+                onClick={() =>
+                  setCurrentPhoto((prev) => (prev + 1) % teamPhotos.length)
+                }
+                className="absolute right-6 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-black/40 text-white flex items-center justify-center backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity hover:bg-accent shadow-xl z-10"
+              >
+                <ChevronRight className="w-8 h-8" />
+              </button>
+            </div>
+
+            {/* Caption and Dots */}
+            <div className="mt-10 text-center">
+              <p
+                className="text-gray-900 dark:text-white font-medium italic mb-8 min-h-[3rem] text-lg px-4"
+              >
+                {teamPhotos[currentPhoto].caption}
+              </p>
+              <div className="flex justify-center space-x-4">
+                {teamPhotos.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentPhoto(idx)}
+                    className={`h-3 rounded-full transition-all duration-500 ${idx === currentPhoto ? 'bg-accent w-16' : 'bg-gray-200 dark:bg-white/20 w-3 hover:bg-black/20 dark:hover:bg-white/40'}`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );

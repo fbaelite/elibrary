@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { Search, ArrowRight, BookOpen, GraduationCap, Newspaper } from 'lucide-react';
+import { Search, ArrowRight, BookOpen, Award, Sparkles, Hotel } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { useState } from 'react';
@@ -11,25 +11,32 @@ import HeaderInfo from '../components/HeaderInfo';
 
 const categories = [
   {
-    title: 'E-LIBRARY',
-    description: 'Kho sách điện tử đa dạng thể loại từ văn học đến kỹ năng chuyên môn.',
-    path: '/e-library',
+    titleLine1: 'Chương trình',
+    titleLine2: 'Tiêu chuẩn',
+    path: '/e-library?program=tieuchuan',
     icon: BookOpen,
     color: 'bg-blue-900',
   },
   {
-    title: 'E-LEARNING',
-    description: 'Hệ thống khóa học trực tuyến chất lượng cao, cập nhật xu hướng công nghệ.',
-    path: '/e-learning',
-    icon: GraduationCap,
+    titleLine1: 'Chương trình',
+    titleLine2: 'Chất lượng cao',
+    path: '/e-library?program=clc',
+    icon: Award,
     color: 'bg-orange-600',
   },
   {
-    title: 'E-MAGAZINE',
-    description: 'Tạp chí số định kỳ với những kiến thức chuyên sâu và hấp dẫn.',
-    path: '/e-magazine',
-    icon: Newspaper,
+    titleLine1: 'Chương trình',
+    titleLine2: 'tiên tiến',
+    path: '/e-library?program=tientien',
+    icon: Sparkles,
     color: 'bg-emerald-700',
+  },
+  {
+    titleLine1: 'Quản trị',
+    titleLine2: 'Khách sạn',
+    path: '/e-library?program=khachsan',
+    icon: Hotel,
+    color: 'bg-violet-700',
   },
 ];
 
@@ -93,7 +100,7 @@ export default function Home() {
             <div className="relative flex items-center">
               <input
                 type="text"
-                placeholder="Tìm kiếm sách, khóa học, tạp chí..."
+                placeholder="Tìm tên tài liệu, sách, kỹ năng..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full px-6 py-4 md:py-5 pr-16 bg-white/95 backdrop-blur-sm rounded-full text-charcoal shadow-2xl focus:outline-none focus:ring-4 focus:ring-accent/20 transition-all text-lg"
@@ -107,14 +114,18 @@ export default function Home() {
       </section>
 
       {/* Categories / Featured Sections */}
-      <section className="py-20 px-4 bg-background-cream dark:bg-primary/20 transition-colors duration-300">
+      <section className="py-20 px-4 bg-background-cream/40 backdrop-blur-sm dark:bg-primary/10 transition-colors duration-300">
         <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-black text-center text-[#ff6600] uppercase tracking-tighter mb-16">
+            Chương trình học của bạn
+          </h2>
+
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
           >
             {categories.map((cat, idx) => {
               const Icon = cat.icon;
@@ -122,22 +133,31 @@ export default function Home() {
                 <motion.div
                   key={idx}
                   variants={itemVariants}
-                  className="group relative overflow-hidden bg-white dark:bg-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-black/5 dark:border-white/5"
+                  whileHover={{ scale: 1.20, zIndex: 20 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  className="group flex flex-col justify-between bg-white dark:bg-slate-800 rounded-[32px] p-8 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.2)] transition-all border border-gray-100 dark:border-white/5 relative overflow-hidden"
                 >
-                  <div className={`h-2.5 w-full ${cat.color}`}></div>
-                  <div className="p-8">
-                    <div className={`inline-flex p-4 rounded-xl ${cat.color} text-white mb-6 transform group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                      <Icon className="w-8 h-8" />
+                  <div
+                    className={`absolute top-0 right-0 w-32 h-32 ${cat.color} opacity-[0.03] -mr-16 -mt-16 rounded-full group-hover:scale-150 transition-transform duration-700`}
+                  ></div>
+
+                  <div className="flex flex-col items-center text-center">
+                    <div className={`inline-flex p-5 rounded-2xl ${cat.color} text-white mb-8 transform group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                      <Icon className="w-10 h-10" />
                     </div>
-                    <h3 className="text-2xl font-bold text-primary dark:text-white mb-4 uppercase tracking-wider">{cat.title}</h3>
-                    <p className="text-gray-800 dark:text-gray-100 mb-8 leading-relaxed">
-                      {cat.description}
-                    </p>
+                    <h3 className="text-[25px] font-black text-primary dark:text-white mb-8 leading-snug drop-shadow-sm min-h-[56px] flex flex-col items-center justify-center">
+                      <span>{cat.titleLine1}</span>
+                      <span className="mt-1">{cat.titleLine2}</span>
+                    </h3>
+                  </div>
+
+                  <div className="w-full">
                     <Link
                       to={cat.path}
-                      className="inline-flex items-center text-accent font-bold hover:translate-x-2 transition-transform uppercase tracking-widest text-sm"
+                      className="w-full bg-accent hover:bg-accent/90 text-white font-black text-[15px] uppercase tracking-[0.2em] py-4 rounded-xl transition-all shadow-md hover:shadow-accent/40 active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
                     >
-                      Khám phá ngay <ArrowRight className="w-4 h-4 ml-2" />
+                      <span>Khám phá ngay</span>
+                      <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
                 </motion.div>

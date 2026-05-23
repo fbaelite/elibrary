@@ -22,6 +22,58 @@
   }
 }
 
+/* Float Animations for SaaS Clouds */
+@keyframes cloud-drift-slow {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+  33% {
+    transform: translate3d(10vw, 4vh, 0) scale(1.03) rotate(1deg);
+  }
+  66% {
+    transform: translate3d(-8vw, -3vh, 0) scale(0.97) rotate(-0.5deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes cloud-drift-medium {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(-12vw, 5vh, 0) scale(1.05) rotate(-1.2deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes cloud-drift-reverse {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(14vw, -6vh, 0) scale(1.04) rotate(1.5deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+}
+
+.animate-cloud-drift-slow {
+  animation: cloud-drift-slow 65s ease-in-out infinite;
+}
+
+.animate-cloud-drift-medium {
+  animation: cloud-drift-medium 50s ease-in-out infinite;
+}
+
+.animate-cloud-drift-reverse {
+  animation: cloud-drift-reverse 75s ease-in-out infinite;
+}
+
 .markdown-body {
   @apply prose prose-slate max-w-none;
 }
