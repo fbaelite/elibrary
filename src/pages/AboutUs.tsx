@@ -50,7 +50,7 @@ export default function AboutUs() {
       caption: 'Function LnD Term VIII - Tập thể khai sinh E-magazine'
     },
     {
-      url: './src/regenerated_image_1779467753117.jpg',
+      url: './src huy/term9.jpg',
       caption: 'Vườn Nhân sự Term 9 phát triển mạnh mẽ E-magazine'
     },
     {

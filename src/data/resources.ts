@@ -138,7 +138,7 @@ export const resources: ResourceItem[] = [
     id: 'elearn-9',
     title: 'HỌC LÀM SAO ĐỂ THẬT LÀ “ELITE”?',
     description: 'Bí quyết học tập và rèn luyện hiệu quả để nâng tầm bản thân và tỏa sáng theo phong cách riêng tại Elite.',
-    image: './src/regenerated_image_1779470263945.png',
+    image: './src huy/hoclamsao.png',
     link: 'https://www.facebook.com/share/v/1BhDx9JArW/',
     category: 'course',
     tags: ['Học tập', 'Kỹ năng']

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 @theme {
   --color-primary: #0B2D4D;
@@ -9,11 +10,12 @@
   --color-charcoal: #2A2A2A;
 
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
 }
 
 @layer base {
   body {
-    @apply bg-warm-white text-charcoal font-sans antialiased transition-colors duration-300;
+    @apply bg-transparent text-charcoal font-sans antialiased transition-colors duration-300;
   }
 
   /* Manual Dark Mode logic for Tailwind 4 if needed, but standard dark: should work */
@@ -77,3 +79,116 @@
 .markdown-body {
   @apply prose prose-slate max-w-none;
 }
+
+/* ===== BACKGROUND CONTAINER ===== */
+.background-effects {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    #ffffff,
+    #f8fbff
+  );
+}
+
+/* ===== CLOUDS ===== */
+.cloud {
+  position: absolute;
+  background: rgba(220, 230, 255, 0.35);
+  border-radius: 999px;
+  filter: blur(18px);
+  opacity: 0.7;
+}
+
+/* Cloud shapes */
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  border-radius: inherit;
+}
+
+/* Cloud 1 */
+.cloud1 {
+  width: 260px;
+  height: 90px;
+  top: 10%;
+  left: -300px;
+  animation: cloudMove 55s linear infinite;
+}
+
+.cloud1::before {
+  width: 120px;
+  height: 120px;
+  top: -40px;
+  left: 40px;
+}
+
+.cloud1::after {
+  width: 140px;
+  height: 140px;
+  top: -55px;
+  right: 30px;
+}
+
+/* Cloud 2 */
+.cloud2 {
+  width: 320px;
+  height: 100px;
+  top: 35%;
+  left: -400px;
+  animation: cloudMove 75s linear infinite;
+}
+
+.cloud2::before {
+  width: 130px;
+  height: 130px;
+  top: -45px;
+  left: 50px;
+}
+
+.cloud2::after {
+  width: 150px;
+  height: 150px;
+  top: -60px;
+  right: 40px;
+}
+
+/* Cloud 3 */
+.cloud3 {
+  width: 220px;
+  height: 80px;
+  top: 70%;
+  left: -250px;
+  animation: cloudMove 65s linear infinite;
+}
+
+.cloud3::before {
+  width: 100px;
+  height: 100px;
+  top: -35px;
+  left: 30px;
+}
+
+.cloud3::after {
+  width: 120px;
+  height: 120px;
+  top: -45px;
+  right: 20px;
+}
+
+/* ===== CLOUD ANIMATION ===== */
+@keyframes cloudMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(140vw);
+  }
+}
+
+

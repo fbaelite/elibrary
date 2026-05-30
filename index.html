@@ -954,7 +954,7 @@
           id: "course-9",
           title: "HỌC LÀM SAO ĐỂ THẬT LÀ “ELITE”?",
           description: "Bí quyết học tập và rèn luyện hiệu quả để nâng tầm bản thân và tỏa sáng theo phong cách riêng tại Elite.",
-          image: "./src/regenerated_image_1779470263945.png",
+          image: "./src huy/hoclamsao.png",
           link: "https://www.facebook.com/share/v/1BhDx9JArW/",
           category: "course",
           tags: ["Học tập", "Kỹ năng"],
@@ -1550,7 +1550,20 @@
 
         const activeImages = carouselImages.filter(img => !brokenImages.has(img));
 
-        const memberImages = [];
+        const memberImages = [
+          "./anh mom/Bangcotay.png",
+          "./anh mom/Báo.png",
+          "./anh mom/Beo.png",
+          "./anh mom/Cháo.png",
+          "./anh mom/Dâu.png",
+          "./anh mom/Dbui.png",
+          "./anh mom/Hang.png",
+          "./anh mom/Panda.png",
+          "./anh mom/Tin.png",
+          "./anh mom/Tủn.png",
+          "./anh mom/duonglepng.png",
+          "./anh mom/mây.png",
+        ];
 
         useEffect(() => {
           if (activeImages.length === 0) return;
@@ -1811,7 +1824,7 @@
             </section>
 
             {/* WELCOME SECTION */}
-            <section className="py-12 bg-warm-white dark:bg-transparent transition-colors duration-300">
+            <section className="py-12 bg-transparent transition-colors duration-300">
               <div className="px-6">
                 <div
                   className="relative group cursor-pointer overflow-hidden rounded-[60px] shadow-2xl transition-all hover:shadow-primary/20 border-8 border-white dark:border-white/10 w-full max-w-7xl mx-auto"
@@ -1879,7 +1892,10 @@
             </section>
 
             <div className="py-24 max-w-7xl mx-auto px-6 -mt-20 relative z-10 transition-colors duration-300">
-              <h2 className="text-4xl md:text-5xl font-black text-center text-[#ff6600] uppercase tracking-tighter mb-16">
+              <h2 
+                style={{ fontFamily: "'Times New Roman', Times, serif" }}
+                className="text-4xl md:text-5xl font-serif font-black text-center text-[#ff6600] uppercase tracking-tighter mb-16"
+              >
                 Chương trình học của bạn
               </h2>
 
@@ -1928,7 +1944,10 @@
                       >
                         <Icon name={card.icon} className="w-10 h-10" />
                       </div>
-                      <h3 className="text-[25px] font-black text-primary dark:text-white mb-8 leading-snug drop-shadow-sm min-h-[56px] flex flex-col items-center justify-center">
+                      <h3 
+                        style={{ fontFamily: "'Times New Roman', Times, serif" }}
+                        className="text-[25px] font-black font-serif text-primary dark:text-white mb-8 leading-snug drop-shadow-sm min-h-[56px] flex flex-col items-center justify-center"
+                      >
                         <span>{card.titleLine1}</span>
                         <span className="mt-1">{card.titleLine2}</span>
                       </h3>
@@ -1949,12 +1968,12 @@
             </div>
 
             {/* ELITE THIS MONTH SECTION */}
-            <section className="py-24 bg-white dark:bg-transparent overflow-hidden transition-colors duration-300">
-              <div className="max-w-7xl mx-auto px-6">
+            <section className="py-16 bg-transparent overflow-hidden transition-colors duration-300">
+              <div className="w-[90%] max-w-6xl mx-auto px-6 scale-90 transform origin-center">
                 <div className="text-center mb-16">
                   <h2
-                    style={{ fontFamily: "Georgia" }}
-                    className="text-4xl md:text-6xl font-black text-primary dark:text-white uppercase tracking-tighter leading-tight italic flex items-center justify-center"
+                    style={{ fontFamily: "'Times New Roman', Times, serif" }}
+                    className="text-4xl md:text-6xl font-black font-serif text-primary dark:text-white uppercase tracking-tighter leading-tight italic flex items-center justify-center"
                   >
                     <Icon
                       name="Star"
@@ -1973,8 +1992,8 @@
                   <div className="space-y-8">
                     <div className="flex flex-col items-center mb-10">
                       <h3
-                        style={{ fontFamily: "Georgia" }}
-                        className="text-3xl md:text-4xl font-black text-primary dark:text-white uppercase italic tracking-tighter cursor-default"
+                        style={{ fontFamily: "'Times New Roman', Times, serif" }}
+                        className="text-3xl md:text-4xl font-black font-serif text-primary dark:text-white uppercase italic tracking-tighter cursor-default"
                       >
                         Event
                       </h3>
@@ -2043,8 +2062,8 @@
                   <div className="space-y-8">
                     <div className="flex flex-col items-center mb-10">
                       <h3
-                        style={{ fontFamily: "Georgia" }}
-                        className="text-3xl md:text-4xl font-black text-primary dark:text-white uppercase italic tracking-tighter cursor-default text-center"
+                        style={{ fontFamily: "'Times New Roman', Times, serif" }}
+                        className="text-3xl md:text-4xl font-black font-serif text-primary dark:text-white uppercase italic tracking-tighter cursor-default text-center"
                       >
                         Member of the month
                       </h3>
@@ -2121,12 +2140,15 @@
             </section>
 
             {/* CONTRIBUTION & RECOGNITION SECTION */}
-            <section className="py-24 bg-white dark:bg-transparent transition-colors duration-300 overflow-hidden">
+            <section className="py-24 bg-transparent transition-colors duration-300 overflow-hidden">
               <div className="max-w-7xl mx-auto px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                   <div className="animate-slide-up">
-                    <h2 className="text-[30px] md:text-[52px] font-black mb-12 py-4 italic leading-normal bg-gradient-to-r from-accent to-orange-400 bg-clip-text text-transparent tracking-normal">
-                      Góc Đóng góp Tài liệu
+                    <h2 
+                      style={{ fontFamily: "'Times New Roman', Times, serif" }}
+                      className="text-[20px] xs:text-[24px] sm:text-[32px] md:text-[42px] lg:text-[34px] xl:text-[44px] font-serif font-black italic whitespace-nowrap mb-12 py-4 pr-6 leading-normal bg-gradient-to-r from-accent to-orange-400 bg-clip-text text-transparent tracking-normal uppercase"
+                    >
+                      GÓC ĐÓNG GÓP TÀI LIỆU
                     </h2>
                     <p className="text-[20px] text-gray-600 dark:text-gray-400 mb-8 leading-relaxed italic transition-colors">
                       Elite Library là thư viện số dành cho các thế hệ Eliters, được phát triển bởi Function Learning & Development nhằm lưu trữ và kế thừa tri thức qua nhiều thế hệ. Dự án hướng tới việc xây dựng một không gian lưu trữ tài liệu học tập và chia sẻ kinh nghiệm trong FBA Elite
@@ -2269,7 +2291,7 @@
         }, [activePage]);
 
         return (
-          <div className="py-20 bg-warm-white dark:bg-transparent min-h-screen animate-fade-in overflow-x-hidden transition-colors duration-300">
+          <div className="py-20 bg-transparent dark:bg-transparent min-h-screen animate-fade-in overflow-x-hidden transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <header className="mb-32 text-center max-w-3xl mx-auto relative group">
                 <motion.div
@@ -2777,7 +2799,7 @@
       };
 
       const ELearningPage = ({ setActivePage }) => (
-        <div className="bg-warm-white dark:bg-transparent min-h-screen animate-fade-in pb-20 overflow-x-hidden transition-colors duration-300">
+        <div className="bg-transparent dark:bg-transparent min-h-screen animate-fade-in pb-20 overflow-x-hidden transition-colors duration-300">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
             <header className="mb-32 text-center max-w-3xl mx-auto relative group">
               <motion.div
@@ -2932,7 +2954,7 @@
         ];
 
         return (
-          <div className="py-20 animate-fade-in bg-warm-white dark:bg-transparent min-h-screen overflow-x-hidden transition-colors duration-300">
+          <div className="py-20 animate-fade-in bg-transparent dark:bg-transparent min-h-screen overflow-x-hidden transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               {/* Title Header */}
               <header className="mb-32 text-center max-w-3xl mx-auto relative group">
@@ -3096,7 +3118,7 @@
             caption: "Function LnD Term VIII - Tập thể khai sinh E-magazine",
           },
           {
-            url: "./src/regenerated_image_1779467753117.jpg",
+            url: "./src huy/term9.jpg",
             caption: "Vườn Nhân sự Term 9 phát triển mạnh mẽ E-magazine",
           },
           {
@@ -3119,7 +3141,7 @@
         ];
 
         return (
-          <div className="animate-fade-in bg-warm-white dark:bg-transparent min-h-screen pb-20 transition-colors duration-300">
+          <div className="animate-fade-in bg-transparent dark:bg-transparent min-h-screen pb-20 transition-colors duration-300">
             {/* Header Section */}
             <header className="bg-white dark:bg-transparent py-24 mb-12 shadow-sm rounded-b-[50px] text-center overflow-hidden relative transition-colors">
               <motion.div
@@ -3259,7 +3281,7 @@
         );
 
         return (
-          <div className="py-20 bg-warm-white dark:bg-transparent min-h-screen animate-fade-in overflow-x-hidden transition-colors duration-300">
+          <div className="py-20 bg-transparent dark:bg-transparent min-h-screen animate-fade-in overflow-x-hidden transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <header className="mb-32 text-center max-w-3xl mx-auto relative">
                 <motion.div
@@ -3467,7 +3489,7 @@
         }
 
         return (
-          <div className="bg-warm-white dark:bg-transparent min-h-screen pb-20 animate-fade-in transition-colors duration-300">
+          <div className="bg-transparent dark:bg-transparent min-h-screen pb-20 animate-fade-in transition-colors duration-300">
             <section className="relative h-[60vh] min-h-[400px] bg-primary dark:bg-transparent overflow-hidden transition-colors">
               <div className="absolute inset-0 opacity-40">
                 <img
@@ -3634,7 +3656,7 @@
         });
 
         return (
-          <div className="bg-warm-white dark:bg-transparent min-h-screen font-sans antialiased text-charcoal dark:text-gray-200 pb-24 transition-colors duration-300">
+          <div className="bg-transparent dark:bg-transparent min-h-screen font-sans antialiased text-charcoal dark:text-gray-200 pb-24 transition-colors duration-300">
             <div className="absolute top-24 left-0 w-full h-[350px] bg-gradient-to-b from-accent/5 to-transparent pointer-events-none -z-10" />
 
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
@@ -4373,7 +4395,7 @@
         });
 
         return (
-          <div className="bg-warm-white dark:bg-transparent min-h-screen font-sans antialiased text-charcoal dark:text-gray-200 pb-24 transition-colors duration-300">
+          <div className="bg-transparent dark:bg-transparent min-h-screen font-sans antialiased text-charcoal dark:text-gray-200 pb-24 transition-colors duration-300">
             <div className="absolute top-24 left-0 w-full h-[350px] bg-gradient-to-b from-accent/5 to-transparent pointer-events-none -z-10" />
 
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
@@ -4582,6 +4604,13 @@
 
         return (
           <div className="flex flex-col min-h-screen dark:bg-transparent">
+            {/* Background Layer with drifting clouds */}
+            <div className="background-effects">
+              <div className="cloud cloud1"></div>
+              <div className="cloud cloud2"></div>
+              <div className="cloud cloud3"></div>
+            </div>
+
             <Navbar
               activePage={activePage}
               setActivePage={setActivePage}
