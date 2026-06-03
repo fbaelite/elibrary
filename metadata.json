@@ -1,8 +1,0 @@
-{
-  "name": "Remix: Elite Library",
-  "description": "A premium multi-purpose library portal offering e-books, e-learning courses, and e-magazines.",
-  "requestFramePermissions": [],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
-}
