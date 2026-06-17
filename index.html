@@ -29,7 +29,7 @@
       rel="stylesheet"
     />
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <!-- React & Babel for browser transpilation -->
     <script
       src="https://unpkg.com/react@18/umd/react.production.min.js"
@@ -40,11 +40,11 @@
       crossorigin
     ></script>
     <script
-      src="https://unpkg.com/framer-motion@11.11.11/dist/framer-motion.js"
+      src="https://unpkg.com/framer-motion@4.1.17/dist/framer-motion.js"
       crossorigin
     ></script>
     <script
-      src="https://unpkg.com/@babel/standalone/babel.min.js"
+      src="https://unpkg.com/@babel/standalone@7/babel.min.js"
       crossorigin
     ></script>
 
@@ -539,8 +539,7 @@
     <div id="root"></div>
 
     <script src="./booksData.js"></script>
-    <script src="./public/booksData.js"></script>
-    <script type="text/babel">
+    <script type="text/babel" data-presets="env,react">
       const { useState, useEffect, useMemo, useRef } = React;
       const fMotion = window.Motion || window.FramerMotion;
       const motion =
@@ -1240,7 +1239,7 @@
               {
                 id: "CLC-DC-24",
                 title: "Chủ nghĩa xã hội",
-                author: "Hoàng Thu Huyền / Nguyễn Hải Đăng",
+                author: "Hoàng Thu Huyền / Nguyễn Hải Đăng / Vũ Minh Tiến",
                 documents: [
                   {
                     ten_tai_lieu: "Chủ nghĩa xã hội - Cô Thúy Hạnh",
@@ -1249,6 +1248,10 @@
                   {
                     ten_tai_lieu: "Đề-cương-CNXHKH.docx - Đăng Nguyễn.pdf",
                     link: "https://drive.google.com/file/d/1RtqELCXk4N9eqy9ATPBQpUym3IqbFnal/view"
+                  },
+                  {
+                    ten_tai_lieu: "Chủ nghĩa Xã hội Khoa học - Cô Đào Nhung",
+                    link: "https://drive.google.com/drive/folders/1xIuwQOtMk_oX0BwkzxJxrm_ye-Go17gK"
                   }
                 ]
               },
@@ -1305,8 +1308,13 @@
               {
                 id: "CLC-CS-01",
                 title: "Quản trị Tài chính",
-                author: "Trần Thanh Huyền / Nguyễn Đào Phương Huyền",
-                documents: []
+                author: "Trần Thanh Huyền / Nguyễn Đào Phương Huyền / Vũ Minh Tiến",
+                documents: [
+                  {
+                    ten_tai_lieu: "Quản trị tài chính - Cô Thúy Anh",
+                    link: "https://drive.google.com/drive/folders/1iZmOWenkb9lYzf9fmJtRIpyBANjyX437"
+                  }
+                ]
               },
               {
                 id: "CLC-CS-02",
@@ -1330,11 +1338,15 @@
               {
                 id: "CLC-CS-03",
                 title: "Marketing căn bản",
-                author: "Nguyễn Đào Phương Huyền / Ngô Thị Hồng Thơm",
+                author: "Nguyễn Đào Phương Huyền / Ngô Thị Hồng Thơm / Vũ Minh Tiến",
                 documents: [
                   {
                     ten_tai_lieu: "Marketing căn bản (cô Châu)",
                     link: "https://drive.google.com/drive/folders/1xv7slZQnFpRNgFACwLE7as8zHCt47vkn"
+                  },
+                  {
+                    ten_tai_lieu: "Marketing căn bản - Cô Hà Trang",
+                    link: "https://drive.google.com/drive/folders/1vik7r1sJj3YYxawgPeW6RboiHlKy4Z8P"
                   }
                 ]
               },
@@ -1450,18 +1462,22 @@
               {
                 id: "CLC-CS-12",
                 title: "Hành vi tổ chức",
-                author: "Nguyễn Đào Phương Huyền",
+                author: "Nguyễn Đào Phương Huyền / Vũ Minh Tiến",
                 documents: [
                   {
                     ten_tai_lieu: "Hành vi tổ chức - Cô Hương",
                     link: "https://drive.google.com/drive/folders/1TigBJuGftpEs7JgcqQCl2XgdBGUxmBCW"
+                  },
+                  {
+                    ten_tai_lieu: "Hành vi tổ chức - Cô Thanh Hương",
+                    link: "https://drive.google.com/drive/folders/1sLYgC7g2xGrhxIt2xCTSmoKBthjaqc3r"
                   }
                 ]
               },
               {
                 id: "CLC-CS-13",
                 title: "Khởi sự kinh doanh",
-                author: "Nguyễn Đào Phương Huyền / Hoàng Thu Huyền",
+                author: "Nguyễn Đào Phương Huyền / Hoàng Thu Huyền / Vũ Minh Tiến",
                 documents: [
                   {
                     ten_tai_lieu: "Khởi sự kinh doanh - Cô Minh Thu",
@@ -1470,6 +1486,10 @@
                   {
                     ten_tai_lieu: "Khởi sự kinh doanh - cô Minh Thu",
                     link: "https://drive.google.com/drive/folders/13jNExmuUJT08qjPgRaS68zhHnMu3bW5K"
+                  },
+                  {
+                    ten_tai_lieu: "Khởi sự kinh doanh - Cô Minh Thu",
+                    link: "https://drive.google.com/drive/folders/1jl7XjnsKncjSaLaureiXymX1aMlhbk0C"
                   }
                 ]
               },
@@ -1509,7 +1529,7 @@
               {
                 id: "CLC-CS-17",
                 title: "Quản trị dự án",
-                author: "Nguyễn Đào Phương Huyền / Nguyễn Hải Đăng / Ngô Thị Hồng Thơm",
+                author: "Nguyễn Đào Phương Huyền / Nguyễn Hải Đăng / Ngô Thị Hồng Thơm / Vũ Minh Tiến",
                 documents: [
                   {
                     ten_tai_lieu: "Quản trị dự án - Cô Đào Thương",
@@ -1526,13 +1546,17 @@
                   {
                     ten_tai_lieu: "QTDA",
                     link: "https://docs.google.com/document/d/1q0X7Ga0pFRvLOOKpn-Ek52g5fDvqq8WwE_yJvCOte-Y/edit?tab=t.0"
+                  },
+                  {
+                    ten_tai_lieu: "Quản trị dự án - Cô Thúy Anh",
+                    link: "https://drive.google.com/drive/folders/1YZsy6OM46H5QvB7lu0FZ_Aa6pqN6tTvO"
                   }
                 ]
               },
               {
                 id: "CLC-CS-18",
                 title: "Quản trị tác nghiệp",
-                author: "Nguyễn Hải Đăng / Trần Thanh Huyền",
+                author: "Nguyễn Hải Đăng / Trần Thanh Huyền / Vũ Minh Tiến",
                 documents: [
                   {
                     ten_tai_lieu: "Test bank Quản trị tác nghiệp - Đăng Nguyễn.pdf",
@@ -1541,6 +1565,10 @@
                   {
                     ten_tai_lieu: "Test bank QTTN",
                     link: "https://drive.google.com/file/d/1q5paS3t6W5Kh4lO4Tn2qosJpy2B3fv-F/view"
+                  },
+                  {
+                    ten_tai_lieu: "Quản trị tác nghiệp - Cô Minh Anh",
+                    link: "https://drive.google.com/drive/folders/1EZsRttFZYyjjedzETHefWvHFCbdwS2iE"
                   }
                 ]
               },
@@ -1640,12 +1668,16 @@
               },
               {
                 id: "CLC-CN-08",
-                title: "Quản trị Đổi mới",
-                author: "Nguyễn Đào Phương Huyền / Eliter",
+                title: "Quản trị đổi mới sáng tạo",
+                author: "Nguyễn Đào Phương Huyền / Eliter / Vũ Minh Tiến",
                 documents: [
                   {
                     ten_tai_lieu: "Quản trị Đổi mới - Cô Hạnh",
                     link: "https://drive.google.com/drive/folders/1De8Lb2vZLAtNc1_PjeWFqCWU9tEe9_W-"
+                  },
+                  {
+                    ten_tai_lieu: "Quản trị đổi mới sáng tạo - Cô Hạnh",
+                    link: "https://drive.google.com/drive/folders/1Mtoe1OqMsZCMiCwf-1VD8rF0IZUl6Mo7"
                   }
                 ]
               },
@@ -1693,7 +1725,7 @@
               {
                 id: "CLC-CN-12",
                 title: "Quản trị và kinh doanh quốc tế",
-                author: "Ngô Thị Hồng Thơm / Eliter / Nguyễn Đào Phương Huyền / Nguyễn Hải Đăng",
+                author: "Ngô Thị Hồng Thơm / Eliter / Nguyễn Đào Phương Huyền / Nguyễn Hải Đăng / Vũ Minh Tiến",
                 documents: [
                   {
                     ten_tai_lieu: "Tài liệu Quản trị và kinh doanh quốc tế",
@@ -1706,17 +1738,25 @@
                   {
                     ten_tai_lieu: "Test Bank Quản trị và kinh doanh quốc tế - Đăng Nguyễn.pdf",
                     link: "https://drive.google.com/file/d/1JZu42Pc5vkc0CwXDOCQv1ObReWC5Wr5H/view"
+                  },
+                  {
+                    ten_tai_lieu: "Quản trị kinh doanh quốc tế - Cô Thùy Dương",
+                    link: "https://drive.google.com/drive/folders/1xFnMkACxWFMuJrOZzDS7MxK6hvBNatHx"
                   }
                 ]
               },
               {
                 id: "CLC-CN-13",
                 title: "Pháp luật doanh nghiệp",
-                author: "Ngô Thị Hồng Thơm",
+                author: "Ngô Thị Hồng Thơm / Vũ Minh Tiến",
                 documents: [
                   {
                     ten_tai_lieu: "Tổng hợp Pháp luật Doanh nghiệp - cô Thảo",
                     link: "https://drive.google.com/drive/folders/1y7Yq8Dr8S37Pq_1eK2gYKINNd5JshGua"
+                  },
+                  {
+                    ten_tai_lieu: "Pháp Luật Doanh Nghiệp - Cô Lý Vương Thảo",
+                    link: "https://drive.google.com/drive/folders/1MbdQNxOyyNOXXKDHQktTA8oiyaH9ktyw"
                   }
                 ]
               },
@@ -1748,7 +1788,7 @@
               {
                 id: "CLC-CN-16",
                 title: "Quản trị đa văn hóa",
-                author: "Ngô Thị Hồng Thơm / Nguyễn Đào Phương Huyền",
+                author: "Ngô Thị Hồng Thơm / Nguyễn Đào Phương Huyền / Vũ Minh Tiến",
                 documents: [
                   {
                     ten_tai_lieu: "Bài nhóm tổng",
@@ -1757,6 +1797,10 @@
                   {
                     ten_tai_lieu: "Quản trị đa văn hoá - Cô Dương",
                     link: "https://drive.google.com/drive/folders/1XKhzcGZA9YZM-4cl3Bm3I59-rNxqbO4Y"
+                  },
+                  {
+                    ten_tai_lieu: "Quản trị đa văn hóa - Cô Thùy Dương",
+                    link: "https://drive.google.com/drive/folders/11ARyaom87rue_gJSvigXaZ-8k0G_JkS8"
                   }
                 ]
               },
@@ -1825,6 +1869,17 @@
                     link: "https://drive.google.com/drive/folders/1r7tyyFf8lT7WsP9x_tc3V45DXjvENxsh"
                   }
                 ]
+              },
+              {
+                id: "CLC-CN-24",
+                title: "Kỹ năng lãnh đạo",
+                author: "Vũ Minh Tiến",
+                documents: [
+                  {
+                    ten_tai_lieu: "Kỹ năng lãng đạo - Cô Thanh Hương",
+                    link: "https://drive.google.com/drive/folders/1n7hoaoPOR7_Iwdbw24qw8rf6uEtpt-x3"
+                  }
+                ]
               }
             ],
             "Môn Ngoại Ngữ": [
@@ -1842,11 +1897,15 @@
               {
                 id: "CLC-NN-02",
                 title: "TACN4",
-                author: "Ngô Thị Hồng Thơm",
+                author: "Ngô Thị Hồng Thơm / Vũ Minh Tiến",
                 documents: [
                   {
                     ten_tai_lieu: "TACN4 (cô Dương Thuỷ)",
                     link: "https://drive.google.com/drive/folders/19GLv1N2CECg82YEeMV0X-1sL26lnaj8P"
+                  },
+                  {
+                    ten_tai_lieu: "Tiếng anh chuyên ngành 4 - Cô Dương Thủy",
+                    link: "https://drive.google.com/drive/folders/1DybR_wxHWr7Ke5LtHRvWySbD2KoZTQcG"
                   }
                 ]
               },
@@ -3767,6 +3826,8 @@
                     </h3>
                     <div className="max-h-[350px] overflow-y-auto pr-2 space-y-3 tribute-scrollbar">
                       {[
+                        "Đỗ Mạnh Thắng (Co-founder)",
+                        "Vũ Minh Tiến",
                         "Nguyễn Khánh Huyền",
                         "Lê Bùi Phương Mai",
                         "Nguyễn Đào Phương Huyền",
@@ -6038,6 +6099,12 @@
             title: "Sapiens - Lược sử về loài người",
             contributor: "Eliter",
             link: "https://drive.google.com/file/d/1sZS-pyx9pVz3mg-edlz2LsGtbVuEZX7e/view",
+          },
+          {
+            genre: "Soft skills",
+            title: "Kinh nghiệm thi Quản trị viên tập sự",
+            contributor: "Đỗ Mạnh Thắng (Co-founder)",
+            link: "https://drive.google.com/open?id=1K05jYsLsd6DHWXcy9MQrCD6gAhvoy6Ua",
           }
         ];
 
